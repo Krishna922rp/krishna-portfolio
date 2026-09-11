@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #070a12;
+  --surface-color: #0d1320;
+  --surface-light: #141d2e;
+
+  --text-primary: #f4f7ff;
+  --text-secondary: #a8b4c9;
+  --text-muted: #68758d;
+
+  --accent-color: #4da3ff;
+  --accent-bright: #78bdff;
+  --accent-dark: #1d6fd1;
+
+  --border-color: rgba(120, 170, 230, 0.18);
+
+  --container-width: 1240px;
+}

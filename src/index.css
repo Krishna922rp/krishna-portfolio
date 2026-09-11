@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bg-color: #070a12;
+  --surface-color: #0d1320;
+  --surface-light: #141d2e;
+
+  --text-primary: #f4f7ff;
+  --text-secondary: #a8b4c9;
+  --text-muted: #68758d;
+
+  --accent-color: #4da3ff;
+  --accent-bright: #4da3ff;
+  --accent-dark: #1d6fd1;
+
+  --border-color: rgba(120, 170, 230, 0.18);
+
+  --container-width: 1240px;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(123, 255, 191, 0.07),
+      transparent 30%
+    ),
+    var(--bg-color);
+  color: var(--text-primary);
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::selection {
+  background: var(--accent-color);
+  color: #07110d;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline-offset: 5px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  width: min(
+    calc(100% - 64px),
+    var(--container-width)
+  );
+  margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+::selection {
+  background: var(--accent-color);
+  color: #07110d;
+}
+
+@media (max-width: 640px) {
+  main {
+    width: min(
+      calc(100% - 36px),
+      var(--container-width)
+    );
+  }
+}

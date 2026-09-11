@@ -1,0 +1,244 @@
+.assistant-section {
+  padding: 120px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.assistant-shell {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.assistant-intro h2 {
+  max-width: 500px;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.assistant-intro h2 span {
+  display: block;
+  color: var(--text-muted);
+}
+
+.assistant-intro p {
+  max-width: 410px;
+  margin: 28px 0 34px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.assistant-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 15px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 999px;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 200ms ease,
+    background 200ms ease,
+    transform 200ms ease;
+}
+
+.assistant-cta span {
+  font-size: 1.1rem;
+}
+
+.assistant-cta:hover {
+  background: var(--accent-color);
+  color: #070a12;
+  transform: translateY(-3px);
+}
+
+.assistant-panel {
+  overflow: hidden;
+  border: 1px solid rgba(77, 163, 255, 0.22);
+  border-radius: 24px;
+  background: #0d1320;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.25),
+    0 0 55px rgba(77, 163, 255, 0.06);
+}
+
+.assistant-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(120, 170, 230, 0.18);
+}
+
+.assistant-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f4f7ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4da3ff;
+  box-shadow: 0 0 14px rgba(77, 163, 255, 0.8);
+  animation: assistant-pulse 1.8s ease-in-out infinite;
+}
+
+.assistant-label {
+  color: #7898c2;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.assistant-message {
+  margin: 24px;
+  padding: 17px 18px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.assistant-message-bot {
+  max-width: 90%;
+  border: 1px solid rgba(120, 170, 230, 0.2);
+  background: #141d2e;
+  color: #dce8fa;
+}
+
+.assistant-message-answer {
+  margin-top: 8px;
+  border: 1px solid rgba(77, 163, 255, 0.35);
+  background: rgba(77, 163, 255, 0.09);
+  color: #e5f1ff;
+}
+
+.assistant-question-list {
+  display: grid;
+  gap: 10px;
+  padding: 0 24px;
+}
+
+.assistant-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 17px 18px;
+  border: 1px solid rgba(120, 170, 230, 0.2);
+  border-radius: 12px;
+  background: transparent;
+  color: #b8c8df;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+  text-align: left;
+  transition:
+    border-color 200ms ease,
+    background 200ms ease,
+    color 200ms ease;
+}
+
+.assistant-question span:last-child {
+  color: #4da3ff;
+  font-size: 1.1rem;
+}
+
+.assistant-question:hover,
+.assistant-question.active {
+  border-color: rgba(77, 163, 255, 0.55);
+  background: rgba(77, 163, 255, 0.09);
+  color: #f4f7ff;
+}
+
+.assistant-panel-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(120, 170, 230, 0.18);
+  color: #68758d;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+}
+
+.assistant-panel-footer span:last-child {
+  color: #4da3ff;
+}
+
+@keyframes assistant-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 1000px) {
+  .assistant-shell {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .assistant-intro p {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .assistant-section {
+    padding: 80px 0;
+  }
+
+  .assistant-intro h2 {
+    font-size: 2.8rem;
+  }
+
+  .assistant-panel-header,
+  .assistant-panel-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .assistant-message {
+    margin: 18px;
+  }
+
+  .assistant-question-list {
+    padding: 0 18px;
+  }
+
+  .assistant-question {
+    padding: 15px;
+  }
+
+  .assistant-panel-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot {
+    animation: none;
+  }
+}
