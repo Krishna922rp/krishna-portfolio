@@ -63,7 +63,7 @@ function Footer() {
 
           <a
             className="footer-action-button"
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/krishna-yadla/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,7 +73,7 @@ function Footer() {
 
           <a
             className="footer-action-button"
-            href="https://github.com"
+            href="https://github.com/Krishna922rp"
             target="_blank"
             rel="noopener noreferrer"
           >
