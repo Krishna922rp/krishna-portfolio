@@ -36,9 +36,9 @@ function Footer() {
 
           <a
             className="footer-email"
-            href="mailto:krishna.yadla.dev@gmail.com"
+            href="mailto:krishna.yadla922@gmail.com"
           >
-            krishna.yadla.dev@gmail.com
+            krishna.yadla922@gmail.com
             <span>↗</span>
           </a>
         </div>
@@ -46,7 +46,7 @@ function Footer() {
         <div className="footer-actions">
           <a
             className="footer-action-button footer-action-primary"
-            href="mailto:krishna.yadla.dev@gmail.com"
+            href="mailto:krishna.yadla922@gmail.com"
           >
             <span>Start a conversation</span>
             <span>↗</span>

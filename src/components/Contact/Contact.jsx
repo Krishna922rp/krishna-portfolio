@@ -1,6 +1,6 @@
 import "./Contact.css";
 
-const EMAIL = "yourmail@gmail.com";
+const EMAIL = "ykrishnanm922@gmail.com";
 
 function Contact() {
   return (
