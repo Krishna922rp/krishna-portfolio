@@ -1,5 +1,6 @@
 .footer-section {
   position: relative;
+  z-index: 1;
   width: 100%;
   overflow: hidden;
   padding: 90px 0 0;
@@ -57,7 +58,10 @@
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(180px, 0.75fr) minmax(350px, 1.4fr) minmax(240px, 0.85fr);
+  grid-template-columns:
+    minmax(180px, 0.75fr)
+    minmax(350px, 1.4fr)
+    minmax(240px, 0.85fr);
   gap: clamp(35px, 5vw, 85px);
   align-items: center;
   width: min(100% - 48px, 1440px);
@@ -67,6 +71,8 @@
 }
 
 .footer-brand {
+  position: relative;
+  z-index: 2;
   min-width: 0;
   align-self: center;
 }
@@ -91,6 +97,8 @@
 }
 
 .footer-center {
+  position: relative;
+  z-index: 2;
   min-width: 0;
   text-align: center;
 }
@@ -119,17 +127,22 @@
 }
 
 .footer-email {
+  position: relative;
+  z-index: 10;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 25px;
   max-width: 100%;
   margin-top: 45px;
+  padding: 8px 0;
   color: var(--accent-color);
   font-family: "DM Mono", monospace;
   font-size: 0.75rem;
   overflow-wrap: anywhere;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
   transition:
     gap 220ms ease,
     color 220ms ease;
@@ -145,6 +158,8 @@
 }
 
 .footer-actions {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -152,6 +167,8 @@
 }
 
 .footer-action-button {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -166,6 +183,8 @@
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
   transition:
     transform 220ms ease,
     border-color 220ms ease,
@@ -202,6 +221,8 @@
 }
 
 .footer-bottom {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;

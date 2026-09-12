@@ -8,6 +8,13 @@ function Footer() {
     });
   };
 
+  const email = "krishna.yadla922@gmail.com";
+
+  const handleEmailClick = (event) => {
+    event.preventDefault();
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
     <footer className="footer-section" id="contact">
       <div className="footer-glow footer-glow-left" />
@@ -36,9 +43,10 @@ function Footer() {
 
           <a
             className="footer-email"
-            href="mailto:krishna.yadla922@gmail.com"
+            href={`mailto:${email}`}
+            onClick={handleEmailClick}
           >
-            krishna.yadla922@gmail.com
+            {email}
             <span>↗</span>
           </a>
         </div>
@@ -46,7 +54,8 @@ function Footer() {
         <div className="footer-actions">
           <a
             className="footer-action-button footer-action-primary"
-            href="mailto:krishna.yadla922@gmail.com"
+            href={`mailto:${email}`}
+            onClick={handleEmailClick}
           >
             <span>Start a conversation</span>
             <span>↗</span>
@@ -56,7 +65,7 @@ function Footer() {
             className="footer-action-button"
             href="https://www.linkedin.com"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span>LinkedIn</span>
             <span>↗</span>
@@ -66,7 +75,7 @@ function Footer() {
             className="footer-action-button"
             href="https://github.com"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <span>GitHub</span>
             <span>↗</span>
@@ -81,7 +90,11 @@ function Footer() {
           Made with <b>React</b> <i>×</i> curiosity
         </span>
 
-        <button className="footer-top-button" onClick={scrollToTop}>
+        <button
+          type="button"
+          className="footer-top-button"
+          onClick={scrollToTop}
+        >
           Back to top
           <span>↑</span>
         </button>
